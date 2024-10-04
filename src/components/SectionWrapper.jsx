@@ -11,7 +11,10 @@ const SectionWrapper = (props) => {
                     {title[0]} <span className={"uppercase text-blue-400"}>{title[1]}</span> {title[2]}
                 </h2>
             </div>
-            {children}
+            <div className={"max-w-[800px] w-full flex flex-col mx-auto gap-10 p-6"}>
+                {children}
+            </div>
+
         </section>
     );
 };

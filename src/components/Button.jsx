@@ -1,17 +1,10 @@
-import React from 'react';
+import React from 'react'
 
-const Button = (props) => {
-
-    // eslint-disable-next-line react/prop-types
-    const {text, func} = props;
-
+export default function Button(props) {
+    const { text, func } = props
     return (
-        <button
-            onClick={func}
-            className={"px-8 py-4 mx-auto rounded-full border-[2px] bg-slate-950 border-blue-400 border-solid blueShadow duration-300"}>
+        <button onClick={func} className='px-8 mx-auto py-4 rounded-full border-[2px] bg-black border-purple-950 border-solid purpleShadow duration-300'>
             <p>{text}</p>
         </button>
-    );
-};
-
-export default Button;
+    )
+}

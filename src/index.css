@@ -2,20 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-    font-family: "Bodoni Moda", sans-serif;
+html {
+    scroll-behavior: smooth;
 }
 
-span{
+* {
+    font-family: "DM Sans", sans-serif;
+}
+
+span {
     font-family: inherit;
     font-weight: inherit;
 }
 
-.blueShadow{
-    box-shadow: 3px 3px 0 0 #60a5fa;
+.purpleShadow {
+    box-shadow: 3px 3px 0 0 #8b4fa4;
 }
 
-.blueShadow:hover{
-    transform: translate(-3px, -3px);
-    box-shadow: 6px 6px 0 0 #60a5fa;
+.purpleShadow:hover {
+    transform: translate(-8px, -8px);
+    box-shadow: 8px 8px 0 0 #8b4fa4;
 }

@@ -1,20 +1,18 @@
-import React from 'react';
-import SectionWrapper from "./SectionWrapper.jsx";
-import ExcerciseCard from "./ExcerciseCard.jsx";
+import React from 'react'
+import SectionWrapper from './SectionWrapper.jsx'
+import ExerciseCard from './ExcerciseCard.jsx'
 
-const Workout = (props) => {
-    const {workout} = props
+export default function Workout(props) {
+    const { workout } = props
     return (
-        <SectionWrapper header={"Welcome to"} title={["the", "HUNGER", "games"]}>
-            <div className={"flex flex-col gap-4"}>
-                {workout.map((excercise, i) => {
+        <SectionWrapper id={'workout'} header={"welcome to"} title={['The', 'WORKOUT', 'zone']}>
+            <div className='flex flex-col gap-4'>
+                {workout.map((exercise, i) => {
                     return (
-                        <ExcerciseCard key={i} excercise={excercise} index={i}/>
+                        <ExerciseCard i={i} exercise={exercise} key={i} />
                     )
                 })}
             </div>
         </SectionWrapper>
-    );
-};
-
-export default Workout;
+    )
+}

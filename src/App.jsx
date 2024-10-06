@@ -3,6 +3,7 @@ import Workout from "./components/Workout.jsx";
 import Generator from "./components/Generator.jsx";
 import {useState} from "react";
 import {generateWorkout} from "./utils/functions.js";
+import KeshriXLabsLogo from "./components/KeshriXLabsLogo.jsx";
 
 function App() {
     const [workout, setWorkout] = useState(null);
@@ -20,11 +21,13 @@ function App() {
         let newWorkout = generateWorkout({poison, muscles, goal});
         console.log(newWorkout);
         setWorkout(newWorkout);
+        window.location.href=("#workout")
     }
 
     return (
         <main
-            className={"min-h-screen flex flex-col bg-gradient-to-r from-slate-950 to-slate-900 text-white text-sm sm:text-base"}>
+            className={"min-h-screen flex flex-col text-white text-sm sm:text-base"}>
+            <KeshriXLabsLogo/>
             <Hero/>
             <Generator poison={poison}
                        muscles={muscles}

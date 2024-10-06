@@ -1,22 +1,16 @@
-import React from 'react';
+import React from 'react'
 
-const SectionWrapper = (props) => {
-    // eslint-disable-next-line react/prop-types
-    const {children, header, title} = props
+export default function SectionWrapper(props) {
+    const { children, header, title, id } = props
     return (
-        <section className="min-h-screen flex flex-col gap-10">
-            <div className={"bg-slate-950 py-10 flex flex-col gap-2 justify-center items-center"}>
-                <p className={"uppercase font-medium"}>{header}</p>
-                <h2 className={"font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl"}>
-                    {title[0]} <span className={"uppercase text-blue-400"}>{title[1]}</span> {title[2]}
-                </h2>
+        <section id={id} className={`min-h-screen flex flex-col gap-10 ${id === 'generate' ? 'bg-gradient-to-r from-gray-950 to-black' : 'bg-gradient-to-r from-gray-950 to-black'}`}>
+            <div className={`py-10 flex flex-col gap-2 justify-center items-center p-4 ${id === 'generate' ? 'bg-white' : 'bg-black'}`}>
+                <p className={`${id === 'generate' ? 'capitalize font-medium text-lg text-black' : 'capitalize font-medium text-lg text-white'}`}>{header}</p>
+                <h2 className={`${id ==='generate' ? 'text-black font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl' : 'text-white font-semibold text-3xl sm:text-4xl md:text-5xl lg:text-6xl'}`}>{title[0]} <span className={`uppercase text-8xl font-bold ${id === 'generate' ? 'text-purple-950' : 'text-red-800'}`}>{title[1]}</span> {title[2]}</h2>
             </div>
-            <div className={"max-w-[800px] w-full flex flex-col mx-auto gap-10 p-6"}>
+            <div className='max-w-[800px] w-full flex flex-col mx-auto gap-10 p-4 '>
                 {children}
             </div>
-
         </section>
-    );
-};
-
-export default SectionWrapper;
+    )
+}

@@ -8,7 +8,7 @@ export default function Hero() {
                 <p className={"text-gray-800 text-2xl"}>Welcome to</p>
                 <h1 className='font-semibold text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-gray-800'>Jeet<span className='text-black'>Fit</span></h1>
             </div>
-            <p className='text-lg md:text-xl font-light text-gray-900'>I hereby acknowledgement that I may become <span className='text-purple-700 font-semibold italic '>unbelievably healthy</span> and accept all risks of becoming the local <span className='text-purple-700 font-semibold italic'>mass montrosity</span>, afflicted with severe body dismorphia, unable to fit through doors.</p>
+            <p className='text-lg  md:text-xl font-light text-gray-900'>I hereby acknowledgement that I may become <span className='text-purple-700 font-semibold italic '>unbelievably healthy</span> and accept all risks of becoming the local <span className='text-purple-700 font-semibold italic'>mass montrosity</span>, afflicted with severe body dismorphia, unable to fit through doors.</p>
             <Button func={() => {
                 window.location.href = '#generate'
             }} text={"Accept & Begin"}></Button>
